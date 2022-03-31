@@ -15,7 +15,7 @@ import com.jucarbol.item.models.service.ItemService;
 public class ItemController {
 
 	/**
-	 * La anotacion @Qualifier en la implementacionalifier es para decir cual
+	 * La anotacion {@code @Qualifier} en la implementacionalifier es para decir cual
 	 * implementacion de la interface usar, se puede usar esta anotacion o el
 	 * @Primary en la implementacion
 	 **/
