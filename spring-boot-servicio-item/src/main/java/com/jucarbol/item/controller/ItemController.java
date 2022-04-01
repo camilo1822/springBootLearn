@@ -20,7 +20,7 @@ public class ItemController {
 	 * @Primary en la implementacion
 	 **/
 	@Autowired
-	@Qualifier("serviceFeign")
+	@Qualifier("serviceRestTemplate")
 	private ItemService itemService;
 
 	@GetMapping("/listar")

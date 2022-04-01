@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 /*Anotacion para indicar que va ser clase de JPA, una entidad relacional*/
 @Entity
@@ -34,6 +35,21 @@ public class Producto implements Serializable {
 	/* Formato de la fecha */
 	@Temporal(TemporalType.DATE)
 	private Date createAt;
+
+	/**
+	 * @Transient Indica que no es persistente, no esta mapeado a base de datos
+	 *            atributos
+	 */
+	@Transient
+	private Integer port;
+
+	public Integer getPort() {
+		return port;
+	}
+
+	public void setPort(Integer port) {
+		this.port = port;
+	}
 
 	public Long getId() {
 		return id;
